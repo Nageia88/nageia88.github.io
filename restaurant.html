@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>OFFICE - NSPACE</title>
+		<title>RESTAURANT - NSPACE</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -31,7 +31,7 @@
 						<ul class="links">
 							<li><a href="home.html">Home</a></li>
 							<li><a href="office.html">Office</a></li>
-							<li><a href="landing.html">Restaurant</a></li>
+							<li><a href="restaurant.html">Restaurant</a></li>
 							<li><a href="landing.html">Cafe</a></li>
 							<li><a href="landing.html">Hotel</a></li>
 							<li><a href="landing.html">Garden</a></li>
@@ -50,7 +50,7 @@
 								<img src="images/pic07.jpg" alt="" />
 							</span>
 							<header class="major">
-								<h1>OFFICE</h1>
+								<h1>RESTAURANT</h1>
 							</header>
 							<div class="content">
 								<p>Lorem ipsum dolor sit amet nullam consequat<br />
@@ -76,12 +76,12 @@
 							<section id="two" class="spotlights">
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/office1.png" alt="" data-position="center center" />
+										<img src="images/restaurant1.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Minimalist </h3>
+												<h3>Fine Dining </h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -92,12 +92,12 @@
 								</section>
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/office2.jpg" alt="" data-position="center center" />
+										<img src="images/restaurant2.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Industrial </h3>
+												<h3>Taiwan Traditional</h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -108,12 +108,12 @@
 								</section>
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/office3.jpg" alt="" data-position="center center" />
+										<img src="images/restaurant3.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Green Consumerism</h3>
+												<h3>Janpanese</h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -124,12 +124,12 @@
 								</section>
 								<section>
 									<a href="generic.html" class="image">
-										<img src="images/office4.jpg" alt="" data-position="center center" />
+										<img src="images/restaurant4.jpg" alt="" data-position="center center" />
 									</a>
 									<div class="content">
 										<div class="inner">
 											<header class="major">
-												<h3>Luxury</h3>
+												<h3>Diner</h3>
 											</header>
 											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
 											<ul class="actions">
@@ -160,7 +160,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form method="post" action="#"  onsubmit="return mailto">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -179,26 +179,35 @@
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
 									</ul>
+									<script>
+										function mailto() {
+											name = document.getElementsByName('name')[0].value; // 把使用者輸入的名稱拿出來用
+											email = document.getElementsByName('email')[0].value; // 把使用者輸入的email拿出來用
+											message = document.getElementsByName('message')[0].value.replaceAll('\n', '%0D%0A'); // 把使用者輸入的內容拿出來用
+											window.location.href = "mailto:xxxxxxxxxx@gmail.com?subject=我沒有問題&body=您好, 我是" + name + ":%0D%0A" + message;
+											return false;
+										}
+									</script>
 								</form>
 							</section>
 							<section class="split">
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
+										<span class="icon solid alt fa-paper-plane"></span>
 										<h3>Email</h3>
 										<a href="#">NojunkMail@hahabox.com</a>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
+										<span class="icon solid alt fa-phone-slash"></span>
 										<h3>Phone</h3>
 										<span>(000) 000-0000 x12387</span>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
+										<span class="icon solid alt fa-house-damage"></span>
 										<h3>Address</h3>
 										<span>1234 Somewhere Road #5432<br />
 										Nashville, TNAmerica 00000<br />

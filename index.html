@@ -29,7 +29,7 @@
 						<ul class="links">
 							<li><a href="home.html">Home</a></li>
 							<li><a href="office.html">Office</a></li>
-							<li><a href="landing.html">Restaurant</a></li>
+							<li><a href="restaurant.html">Restaurant</a></li>
 							<li><a href="landing.html">Cafe</a></li>
 							<li><a href="landing.html">Hotel</a></li>
 							<li><a href="landing.html">Garden</a></li>
@@ -83,7 +83,7 @@
 										<img src="images/restaurant.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="landing.html" class="link">RESTAURANT</a></h3>
+										<h3><a href="restaurant.html" class="link">RESTAURANT</a></h3>
 										<p>Lorem etiam nullam</p>
 									</header>
 								</article>
@@ -135,7 +135,7 @@
 					<section id="contact">
 						<div class="inner">
 							<section>
-								<form method="post" action="#">
+								<form method="post" action="#"  onsubmit="return mailto()">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
@@ -154,26 +154,36 @@
 										<li><input type="submit" value="Send Message" class="primary" /></li>
 										<li><input type="reset" value="Clear" /></li>
 									</ul>
+									<script>
+										function mailto() {
+											name = document.getElementsByName('name')[0].value; // 把使用者輸入的名稱拿出來用
+											email = document.getElementsByName('email')[0].value; // 把使用者輸入的email拿出來用
+											message = document.getElementsByName('message')[0].value.replaceAll('\n', '%0D%0A'); // 把使用者輸入的內容拿出來用
+											window.location.href = "mailto:xxxxxxxxxx@gmail.com?subject=我沒有問題&body=您好, 我是" + name + ":%0D%0A" + message;
+											return false;
+										}
+									</script>
+									
 								</form>
 							</section>
 							<section class="split">
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
+										<span class="icon solid alt fa-paper-plane"></span>
 										<h3>Email</h3>
 										<a href="#">NojunkMail@hahabox.com</a>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
+										<span class="icon solid alt fa-phone-slash"></span>
 										<h3>Phone</h3>
 										<span>(000) 000-0000 x12387</span>
 									</div>
 								</section>
 								<section>
 									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
+										<span class="icon solid alt fa-house-damage"></span>
 										<h3>Address</h3>
 										<span>1234 Somewhere Road #5432<br />
 											Nashville, TNAmerica 00000<br />
